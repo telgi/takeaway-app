@@ -20,11 +20,13 @@ class Takeaway
   def home_options
     puts "Select an option:"
     puts "Type 'Menu' to View Menu"
+    puts "Type 'Quit' to Quit Menu"
   end
 
   def home_page(selection)
     case selection
     when :menu then display_menu
+    when :quit then exit_app
     end
   end
 
@@ -37,6 +39,11 @@ class Takeaway
   def display_menu
     @menu.print
     home
+  end
+
+  def exit_app
+    conclusion
+    exit
   end
 
   def conclusion

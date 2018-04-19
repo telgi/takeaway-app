@@ -53,3 +53,4 @@ I would like to receive a text such as "Thank you! Your order was placed and wil
 4) Takeaway.rb will be the only object that directly interacts with the user
 5) User will have options available for navigation. One of which is seeing the menu
 6) The menu will be a new object that has the single responsibility of displaying each item and the corresponding price
+7) The user is currently stuck in an infinite loop so we need to add the ability to quit
