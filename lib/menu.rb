@@ -13,6 +13,10 @@ class Menu
   end
 
   def print
-    @meals.map { |item, price| puts "#{item} : #{price}" }
+    i = 1
+    @meals.map do |item, price|
+      puts "#{i}. #{item.capitalize} : £" + sprintf('%.2f', price)
+      i += 1
+    end
   end
 end
