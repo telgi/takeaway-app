@@ -44,6 +44,7 @@ class Takeaway
   def order_options
     puts "Select an option:"
     puts "Type 'Add' to Add Item"
+    puts "Type 'View' to View Order"
     puts "Type 'Clear' to Reset Order"
     puts "Type 'Home' to Go Back to Home"
     puts "Type 'Quit' to Leave"
@@ -53,6 +54,7 @@ class Takeaway
   def order_page(selection)
     case selection
     when :add then add_item
+    when :view then display_order
     when :clear then create_order
     when :home then home
     when :exit then exit_app
@@ -78,6 +80,11 @@ class Takeaway
   def display_menu
     @menu.print
     home
+  end
+
+  def display_order
+    @order.display
+    order_options
   end
 
   def exit_app

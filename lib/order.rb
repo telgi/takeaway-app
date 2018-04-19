@@ -19,6 +19,13 @@ class Order
     end
   end
 
+  def display
+    puts "This is your current order:"
+    @basket.map do |item, quantity|
+      puts "#{item} x #{quantity}"
+    end
+  end
+
   private
 
   def item_on_menu?(item)
