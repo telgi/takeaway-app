@@ -1,13 +1,20 @@
+require_relative 'menu'
+
 class Takeaway
+  attr_reader :menu
+
+  def initialize(menu = Menu.new)
+    @menu = menu
+  end
+
   def launch!
     introduction
+    home
+  end
+
+  def home
     home_options
     home_page(STDIN.gets.chomp.strip.downcase.to_sym)
-    # action loop
-      # what do you want to do?
-      # do that action
-    # repeat until user quits
-    conclusion
   end
 
   def home_options
@@ -29,7 +36,7 @@ class Takeaway
 
   def display_menu
     @menu.print
-    home_options
+    home
   end
 
   def conclusion
