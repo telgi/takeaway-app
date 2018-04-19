@@ -38,7 +38,7 @@ I would like to receive a text such as "Thank you! Your order was placed and wil
 
 * User can view all dishes and their prices [x]
 * User can select an item and add it to their basket [x]
-* User can view the current basket and the running total []
+* User can view the current basket and the running total [x]
 * User will receive a confirmation message of when their order will arrive []
 
 ## Domain Model

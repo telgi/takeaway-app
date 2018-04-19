@@ -21,6 +21,8 @@ class Order
 
   def display
     sub_total
+    puts "----"
+    total
   end
 
   private
@@ -35,5 +37,13 @@ class Order
       total = "%.2f" % (quantity * @menu.items[item])
       puts "#{item} x #{quantity}: £#{total}"
     end
+  end
+
+  def total
+    total = 0
+    @basket.map do |item, quantity|
+      total += (quantity * @menu.items[item])
+    end
+    puts "Your current total is £#{"%.2f" % total}"
   end
 end
