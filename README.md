@@ -8,11 +8,11 @@ an order.
 
 `git clone git@github.com:telgi/takeaway-challenge-revisited.git`
 
-Run `bundle install` to download any gem dependencies
+Run `bundle` to download any gem dependencies
 
 ## Usage
 
-Run `ruby app.rb` in the command line to interact with application
+Run `ruby app.rb` in the command line to launch the application
 
 ## User Stories
 
@@ -36,7 +36,7 @@ I would like to receive a text such as "Thank you! Your order was placed and wil
 
 ## Features
 
-* User can view all dishes and their prices []
+* User can view all dishes and their prices [x]
 * User can select an item and add it to their basket []
 * User can view the current basket and the running total []
 * User will receive a confirmation message of when their order will arrive []
@@ -49,3 +49,7 @@ I would like to receive a text such as "Thank you! Your order was placed and wil
 
 1) Establish core features via user stories
 2) Diagram how Ruby objects will interact with each other
+3) Establish connectivity to console by launching Takeaway.rb from app.rb in the root
+4) Takeaway.rb will be the only object that directly interacts with the user
+5) User will have options available for navigation. One of which is seeing the menu
+6) The menu will be a new object that has the single responsibility of displaying each item and the corresponding price
