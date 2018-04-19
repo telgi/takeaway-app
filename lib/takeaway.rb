@@ -22,7 +22,7 @@ class Takeaway
     puts "Select an option:"
     puts "Type 'Menu' to View Menu"
     puts "Type 'Order' to Place Order"
-    puts "Type 'Quit' to Quit Menu"
+    puts "Type 'Quit' to Leave"
   end
 
   def home_page(selection)
@@ -30,6 +30,9 @@ class Takeaway
     when :menu then display_menu
     when :order then create_order
     when :quit then exit_app
+    else
+      puts "Please try again"
+      home
     end
   end
 
@@ -41,12 +44,21 @@ class Takeaway
   def order_options
     puts "Select an option:"
     puts "Type 'Add' to Add Item"
+    puts "Type 'Clear' to Reset Order"
+    puts "Type 'Home' to Go Back to Home"
+    puts "Type 'Quit' to Leave"
     order_page(STDIN.gets.chomp.strip.downcase.to_sym)
   end
 
   def order_page(selection)
     case selection
     when :add then add_item
+    when :clear then create_order
+    when :home then home
+    when :exit then exit_app
+    else
+      puts "Please try again"
+      order_options
     end
   end
 
@@ -74,6 +86,6 @@ class Takeaway
   end
 
   def conclusion
-    puts "Goodbye and happy munching!"
+    puts "Goodbye - Thanks for visiting!"
   end
 end
