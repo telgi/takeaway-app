@@ -49,8 +49,9 @@ I would like to receive a text such as "Thank you! Your order was placed and wil
 
 1) Establish core features via user stories
 2) Diagram how Ruby objects will interact with each other
-3) Establish connectivity to console by launching Takeaway.rb from app.rb in the root
-4) Takeaway.rb will be the only object that directly interacts with the user
-5) User will have options available for navigation. One of which is seeing the menu
-6) The menu will be a new object that has the single responsibility of displaying each item and the corresponding price
+3) Establish connectivity to console by launching `Takeaway.rb` from `app.rb` in the root
+4) `Takeaway` will be the only object that directly interacts with the user
+5) User will have options available for navigation - one of which is seeing the menu
+6) `Menu` will be a new object that has the single responsibility of displaying each item and the corresponding price
 7) The user is currently stuck in an infinite loop so we need to add the ability to quit
+8) Now that the user can view the menu, an `Order` object will allow the user to select items that get added to a basket
