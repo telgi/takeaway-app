@@ -37,7 +37,7 @@ I would like to receive a text such as "Thank you! Your order was placed and wil
 ## Features
 
 * User can view all dishes and their prices [x]
-* User can select an item and add it to their basket []
+* User can select an item and add it to their basket [x]
 * User can view the current basket and the running total []
 * User will receive a confirmation message of when their order will arrive []
 
@@ -55,3 +55,7 @@ I would like to receive a text such as "Thank you! Your order was placed and wil
 6) `Menu` will be a new object that has the single responsibility of displaying each item and the corresponding price
 7) The user is currently stuck in an infinite loop so we need to add the ability to quit
 8) Now that the user can view the menu, an `Order` object will allow the user to select items that get added to a basket
+9) Make sure that only items from the menu can be added to the basket
+10) After accidentally adding a specific item where I should have typed 'add', I discovered that this caused the app to exit. We now need else clauses in both sets of user options to prevent this
+11) Add more options for user to easily navigate around app, such as exiting, going back to home, and resetting order
+12) As a sanity check, we want to see that when the user adds an item, the item has actually been added to their basket. This means we want functionality to display the basket
