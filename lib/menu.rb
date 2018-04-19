@@ -1,8 +1,8 @@
 class Menu
-  attr_reader :meals
+  attr_reader :items
 
   def initialize
-    @meals = {
+    @items = {
       burger: 5.00,
       chicken: 5.00,
       pizza: 8.00,
@@ -14,7 +14,7 @@ class Menu
 
   def print
     i = 1
-    @meals.map do |item, price|
+    @items.map do |item, price|
       puts "#{i}. #{item.capitalize} : £" + sprintf('%.2f', price)
       i += 1
     end
