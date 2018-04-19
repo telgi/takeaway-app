@@ -20,10 +20,7 @@ class Order
   end
 
   def display
-    puts "This is your current order:"
-    @basket.map do |item, quantity|
-      puts "#{item} x #{quantity}"
-    end
+    sub_total
   end
 
   private
@@ -31,5 +28,12 @@ class Order
   def item_on_menu?(item)
     @menu = Menu.new
     @menu.items.has_key?(item)
+  end
+
+  def sub_total
+    @basket.map do |item, quantity|
+      total = "%.2f" % (quantity * @menu.items[item])
+      puts "#{item} x #{quantity}: £#{total}"
+    end
   end
 end
