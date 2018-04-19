@@ -83,7 +83,6 @@ class Takeaway
   end
 
   def display_order
-    puts "This is your current order:"
     @order.display
     order_options
   end

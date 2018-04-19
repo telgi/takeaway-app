@@ -20,9 +20,14 @@ class Order
   end
 
   def display
-    sub_total
-    puts "----"
-    total
+    if order_empty?
+      puts "Your basket is empty"
+    else
+      puts "This is your current order:"
+      sub_total
+      puts "----"
+      total
+    end
   end
 
   private
@@ -30,6 +35,10 @@ class Order
   def item_on_menu?(item)
     @menu = Menu.new
     @menu.items.has_key?(item)
+  end
+
+  def order_empty?
+    @basket.empty?
   end
 
   def sub_total

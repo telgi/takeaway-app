@@ -61,3 +61,4 @@ I would like to receive a text such as "Thank you! Your order was placed and wil
 12) As a sanity check, we want to see that when the user adds an item, the item has actually been added to their basket. This means we want functionality to display the basket
 13) Now that the user can see their added items are being recorded in their basket, we need to add functionality for accumulating the running total and present this back to the user
 14) To complete the 3rd feature, viewing the current order needs to be able to add all items together and sum the overall price for the user
+15) Cover edge case of user trying to view an empty basket
